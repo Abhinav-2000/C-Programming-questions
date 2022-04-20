@@ -1,0 +1,40 @@
+//print the given pattern
+
+        1 
+      1 2 1 
+    1 2 3 2 1 
+  1 2 3 4 3 2 1 
+1 2 3 4 5 4 3 2 1 
+
+
+C++ CODE FOR THE GIVEN PATTERN
+
+#include <iostream>
+using namespace std;
+
+
+int main() {
+  int n = 5;
+
+  for(int i = 1; i <= n; i++)
+    {
+      for(int s = 1; s <= 2*n-2*i; s++)
+        {
+          cout << " ";
+        }
+
+      for(int j = 1; j <= i; j++)
+        {
+          cout << j << " ";
+        } 
+    
+      int val = i-1;
+      for(int k = 1; k <= i-1; k++)
+        {
+          cout << val << " ";
+          val--;
+        }
+    
+      cout << endl;
+    }
+}
