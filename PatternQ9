@@ -7,7 +7,7 @@
 1 2 3 4 5 4 3 2 1 
 
 
-C++ CODE FOR THE GIVEN PATTERN
+************************************************* C++ CODE FOR THE GIVEN PATTERN ***************************************************************
 
 #include <iostream>
 using namespace std;
