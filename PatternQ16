@@ -1,0 +1,46 @@
+//print the given pattern for
+n=5
+
+
+********1********
+*******2*2*******
+******3*3*3******
+*****4*4*4*4*****
+****5*5*5*5*5****
+
+
+****************************************************** C++ CODE FOR THE FOLLOWING PATTERN ****************************************************************
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  int n = 5;
+
+  for(int i = 0; i < n; i++)
+    {
+      for(int j = 0; j < 2*n-i-2; j++)
+        {
+          cout << "*";
+        }
+
+      for(int k = 1; k <= 2*i+1; k++)
+        {
+          if(k%2 !=0)
+          {
+            cout << i+1;
+          }
+          else
+          {
+            cout << "*";
+          }
+        }
+
+      for(int j = 0; j < 2*n-i-2; j++)
+        {
+          cout << "*";
+        }
+      cout << endl;
+    }
+}
