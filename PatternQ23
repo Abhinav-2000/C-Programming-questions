@@ -1,0 +1,83 @@
+// print the following pattern for 
+
+n = 4 
+
+* 
+* 1 * 
+* 1 2 1 * 
+* 1 2 3 2 1 * 
+* 1 2 1 * 
+* 1 * 
+* 
+
+
+**************************************************** C++ CODE FOR THE FOLLOWING PATTERN **********************************************************************
+
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  int n = 4;
+
+  for(int i = 1; i <= n; i++)
+    {
+      for(int j = 1; j <= i; j++)
+        {
+          if(j==1)
+          {
+            cout << "* ";
+          }
+          else
+          {
+            cout << j-1 << " ";
+          }
+        }
+
+      int start = i - 2;
+      for(int k = 1; k < i; k++)
+        {
+          if(k == i-1)
+          {
+            cout << "* ";
+          }
+          else
+          {
+            cout << start << " ";
+            start--;
+          }
+        }
+      cout << endl;
+    }
+
+  for(int i = n-1; i > 0; i--)
+    {
+      for(int j = 1; j <= i; j++)
+        {
+          if(j==1)
+          {
+            cout << "* ";
+          }
+          else
+          {
+            cout << j-1 << " ";
+          }
+        }
+
+      int start = i-2;
+      for(int k = 1; k <= i-1; k++)
+        {
+          if(k == i-1)
+          {
+            cout << "* ";
+          }
+          else
+          {
+            cout << start << " ";
+            start--;
+          }
+        }
+      cout << endl;
+    }
+}
