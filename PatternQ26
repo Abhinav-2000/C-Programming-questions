@@ -1,0 +1,63 @@
+// print the following pattern for
+
+n = 5 
+
+* * * * *   * * * * * 
+* * * *       * * * * 
+* * *           * * * 
+* *               * * 
+*                   * 
+*                   * 
+* *               * * 
+* * *           * * * 
+* * * *       * * * * 
+* * * * *   * * * * * 
+
+
+
+******************************************************** C++ CODE FOR THE FOLLOWING PROGRAM ****************************************************************
+
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  int n = 5;
+
+  for(int i = 1; i <= n; i++)
+    {
+      for(int j = 1; j <= n-i+1; j++)
+        {
+          cout << "* "; //star with single space
+        }
+
+      for(int s = 1; s <= 2*i-1; s++)
+        {
+          cout << "  "; //double space
+        }
+
+      for(int k = 1; k <= n-i+1; k++)
+        {
+          cout << "* "; //star with single space
+        }
+      cout << endl;
+    }
+
+  for(int i = 1; i <= n; i++)
+    {
+      for(int j = 1; j <= i; j++)
+        {
+          cout << "* "; //star with single space
+        }
+      for(int s = 1; s <= 2*n - 2*i +1; s++)
+        {
+          cout << "  "; //star with double space
+        }
+      for(int k = 1; k <= i ; k++)
+        {
+          cout << "* "; // star with single space
+        }
+      cout << endl;
+    }
+}
