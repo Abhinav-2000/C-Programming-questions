@@ -1,0 +1,49 @@
+//print the following pattern for 
+
+n = 7 
+
+1 
+1 1 
+1 2 1 
+1 3 3 1 
+1 4 6 4 1 
+1 5 10 10 5 1 
+1 6 15 20 15 6 1 
+
+
+***************************************************** C++ CODE FOR THE FOLLOWING PATTERN ******************************************************************
+
+#include <iostream>
+using namespace std;
+
+int factorial(int n)
+{
+  int ans = 1;
+  for(int i = 1; i <= n; i++)
+    {
+      ans = ans * i;
+    }
+  return ans;
+}
+int ncr(int n, int r)
+{
+  int val1 = factorial(n);
+  int val2 = factorial(r);
+  int val3 = factorial(n-r);
+  
+  return val1/(val2*val3);
+}
+int main()
+{
+  int n = 7;
+
+  for(int i = 0; i < n; i++)
+    {
+      for(int j = 0; j <= i; j++)
+        {
+          int val = ncr(i,j);
+          cout << val << " ";
+        }
+      cout << endl;
+    }
+}
